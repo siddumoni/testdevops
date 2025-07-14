@@ -3,13 +3,13 @@
   become: true
   tasks:
     - name: Install apache2
-      ansible_builtin_apt:
+      ansible.builtin.apt:
         name: apache2
         state: present
         update_cache: yes
 
     - name: Copy index.html to /tmp/
-      ansible_builtin_copy:
+      ansible.builtin.copy:
         src: index.html
         dest: /tmp/
         owner: ubuntu
